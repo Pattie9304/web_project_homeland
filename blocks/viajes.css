@@ -1,0 +1,78 @@
+.viajes
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 984px;
+}
+
+.viajes__title
+{
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+    color:  #FFFFFF;
+    text-align: center;
+    margin-bottom:54px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:720px;
+}
+
+.viajes__description
+{
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    color:  #FFFFFF;
+    text-align: center;
+    margin-bottom: 71px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:720px;
+}
+
+.viajes_image
+{
+    width: 100%;
+    max-width: 984px;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen  and (min-width: 544px) and (max-width: 768px) {
+    .viajes__title
+    {
+        font-size: 75px;
+        line-height: 79px;
+        margin-bottom:43px;
+        max-width: calc(100% - 148px);
+    }
+    .viajes__description
+    {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 39px;
+        max-width: calc(100% - 148px);
+    }
+}
+  
+@media screen  and (min-width: 320px) and (max-width: 543px) {
+    .viajes__title
+    {
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom:23px;
+        max-width: calc(100% - 32px);
+    }
+    .viajes__description
+    {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 44px;
+        max-width: calc(100% - 32px);
+    }
+}
