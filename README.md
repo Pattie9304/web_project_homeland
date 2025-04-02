@@ -7,6 +7,10 @@ Patricia Higuera
 
 ## Versión
 1.1 - En esta versión se realizaron ajustes en el tamaño y posicionamiento de los elementos de la galería. Con ello se garantiza que las secciones se acoplen correctamente a la mayor parte de los navegadores actuales.
+1.2 - En esta versión se añade el módulo de galería y el enlace a la página del proyecto.
+
+## Enlace al proyecto
+https://pattie9304.github.io/web_project_homeland/
 
 ## Tecnologías
 HTML
