@@ -116,7 +116,7 @@
 
 .places__card-button:hover
 {
-  background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+  background: linear-gradient(90deg, #0278FE40 0%, #003A7B40 99.98%);
 }
 
 @media screen and (max-width: 1024px)
@@ -232,7 +232,7 @@
       }
     
       .places__card-button:hover {
-        background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+        background: linear-gradient(90deg, #0278FE40 0%, #003A7B40 99.98%);
       }
 }
 
@@ -351,7 +351,7 @@
       }
     
       .places__card-button:hover {
-        background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+        background: linear-gradient(90deg, #0278FE40 0%, #003A7B40 99.98%);
       }
 }
 
@@ -462,7 +462,7 @@
     }
     
       .places__card-button:hover {
-        background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+        background: linear-gradient(90deg, #0278FE40 0%, #003A7B40 99.98%);
       }
 }
 
@@ -566,7 +566,7 @@
     }
     
       .places__card-button:hover {
-        background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+        background: linear-gradient(90deg, #0278FE40 0%, #003A7B40 99.98%);
       }
 }
 
