@@ -1,92 +1,104 @@
-.places__details-container {
-    margin:0 151px;
-    max-width:984px;
-    display:flex;
-    justify-content: center;
+.places {
+    width:100%;
+    height: auto;
 }
-
-.places__details {
-    display:flex;
-    max-width: 460px;
-    justify-content: center;
-    flex-direction: column;
-    align-self: baseline;
-}
-
-.places__details-element_one
+.places__card-content
 {
-    margin-bottom:80px;
+    display: grid;
+    width: 984px;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "title ."
+      "title header"
+      "image first-text"
+      "button first-text";
+    margin: auto;
+    padding-bottom: 80px;
 }
 
-.places__details-element_two {
-    margin-bottom: 80px;
-}
-
-.places__details-element_two .places__artists-author-one
-{
-    margin-bottom: 64px;
-}
-
-.places__details-element_three {
-    margin-bottom: 80px;
-}
-
-.places__details-element_three .places__artists-author-one
-{
-    margin-bottom: 64px;
-}
-
-.places__details-title {
+.places__card-title {
+    grid-area: title;
     font-family: "Inter", Arial, sans-serif;
     font-size: 72px;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 76px;
     color:  #FFFFFF;
     text-align: left;
-    margin-bottom: 48px;
+    width: 460px;
+    height: 152px;
+    margin: 0 0 48px 0;
 }
-.places__details-subtitle {
+
+.places__card-header {
+    grid-area: header;
+    width: 456px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.places__card-subtitle {
     font-family: "Inter", Arial, sans-serif;
     font-size: 12px;
-    font-weight: 500;
-    line-height: 1;
-    color:#AAAAAA;
-    letter-spacing: 3px;
+    font-weight: 400;
+    line-height: 100%;
     text-transform: uppercase;
-    margin-bottom:8px;
-}
+    letter-spacing: 3px;
+    color: #aaaaaa;
+    text-align: left;
+    margin-bottom: 8px;
+  }
 
-.places__details-author-one {
+  .places__card-author {
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 22px;
     color:#ffffff;
+    margin:0;
     padding-bottom:4px;
 }
 
-.places__details-author-two {
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.1;
-    color:#ffffff;
-    padding-bottom:4px;
-    margin-bottom:40px;
-}
-
-.places__details-image {
-    width:100%;
-    min-width: 460px;
-    height: 100%;
-    min-height: 460px;
+.places__card-image {
+    grid-area: image;
+    width: 460px;
+    height: 460px;
     object-fit: cover;
+    margin-top: 48px;
     margin-bottom: 48px;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
-.places__image-details-button {
+.places__card-image:hover {
+    opacity: 0.5;
+  }
+  
+.places__card-details {
+    grid-area: first-text;
+    width: 100%;
+    max-width:484px;
+    min-width: 300px;
+    height: 203px;
+    padding-top:24px;
+    margin-bottom: 25px;
+}
+.places__card-details-description {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 163%;
+    text-align: left;
+    color:#ffffff;
+}
+  .places__card-button {
+    grid-area: button;
     width: 330px;
     height: 48px;
+    justify-self: start;
+    box-shadow: 5px 5px 10px #00000040;
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -96,248 +108,478 @@
     vertical-align: middle;
     text-align: center;
     letter-spacing: 0;
-    padding:13px 20px;
-    border-radius: 4px;
+    padding:10px 20px;
     background:
     linear-gradient(90deg, rgba(2,120,254,1) 0%, rgba(0,58,123,1) 100%);
+    border-radius: 5px;
+    border: none;
+    transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
-.places__image-details-button:hover
+.places__card-button:hover
 {
     background:
     linear-gradient(90deg, rgba(2,120,254,0.25) 0%, rgba(0,58,123,0.25) 100%);
 }
 
-.places__image-details {
-margin-top:100px;
-padding-bottom:8px;
-margin-left:40px;
-width: 100%;
-min-width: 484px;
-}
-
-.places__image-details-description {
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.1;
-    text-align: left;
-    color:#ffffff;
-    margin-bottom: 25px;
-}
-
-.places__image-details-description:last-of-type {
- margin-bottom: 144px;
-}
-
-@media screen  and (min-width: 481px) and (max-width: 768px)
+@media screen and (max-width: 1024px)
 {
-    .places__details-container {
-        margin:0 24px;
-        display:flex;
-        justify-content: center;
-    }
-    .places__details {
-        display:flex;
-        max-width: 50%;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .places__details-element_two .places__artists-author-one
-    {
-        margin-bottom: 36px;
-    }
-    .places__details-element_three {
-        margin-bottom:73px;
-    }
-
-    .places__details-element_three .places__artists-author-one
-    {
-        margin-bottom: 38px;
-    }
-    .places__artists {
-        margin-top:-20px;
-        padding-bottom:8px;
-        margin-left:40px;
+    .places {
         width: 100%;
-        min-width: 50%;
-    }
-    .places__details-element_two .places__artists
-    {
-        margin-top: 5px;
-        margin-bottom: 80px;
-    }
-    .places__details-element_three .places__artists
-    {
-        margin-top: 52px;
-    }
-    .places__details-title {
+        height: auto;
+      }
+    
+      .places__card-content {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+          "title ."
+          "title header"
+          "image first-text"
+          "button first-text";
+        margin: auto;
+        padding-bottom: 80px;
+      }
+    
+      .places__card-title {
+        grid-area: title;
         font-family: "Inter", Arial, sans-serif;
-        font-size: 25px;
+        font-size: 52px;
         font-weight: 900;
-        line-height: 1.1;
+        line-height: 76px;
         color:  #FFFFFF;
         text-align: left;
-        margin-bottom: 48px;
+        width: 360px;
+        height: 152px;
+        margin: 0px 48px;
     }
-        .places__details-image {
-        width: 100%;
-        min-width: 50%;
-        height: 100%;
-        min-height: 50%;
-        max-height: 50%;
-        object-fit: cover;
+    
+    .places__card-image {
+        grid-area: image;
+        width: 360px;
+        height: 360px;
+        margin: 24px 48px;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
     }
-    .places__details-button {
-        width:80%;
-        font-size:12px;
-        padding: 10px 10px;
+    
+      .places__card-image:hover {
+        opacity: 0.5;
+      }
+    
+      .places__card-header {
+        grid-area: header;
+        width: 260px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0 0 20px 0;
+      }
+    
+      .places__card-subtitle {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        margin-bottom: 8px;
+      }
+    
+      .places__card-author {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+      }
+    
+      .places__card-details {
+        grid-area: first-text;
+        max-width: 260px;
+        height: auto;
+        padding-top: 24px;
+        margin-bottom: 25px;
+    }
+
+      .places__card-details-description {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 163%;
+        text-align: left;
+        color:#ffffff;
+    }
+    
+    .places__card-button {
+        grid-area: button;
+        margin: 24px 48px;
+        width: 330px;
+        height: 48px;
+        justify-self: start;
+        box-shadow: 5px 5px 10px #00000040;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1;
+        color:#FFFFFF;
+        text-decoration: none;
         vertical-align: middle;
+        text-align: center;
+        letter-spacing: 0;
+        padding:10px 20px;
+        background:
+        linear-gradient(90deg, rgba(2,120,254,1) 0%, rgba(0,58,123,1) 100%);
+        border-radius: 5px;
+        border: none;
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+    
     }
-    .places__details-element_one {
-        margin-bottom: 80px;
-    }
-    .places__artists-description:last-of-type {
-        margin-bottom: 0px;
-       }       
+    
+      .places__card-button:hover {
+        background-image: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
+      }
 }
 
-@media screen  and (min-width: 320px) and (max-width: 480px)
+@media screen and (max-width: 768px)
 {
-    .places__details-container {
-        margin:0 24px;
-        display:flex;
+    .places {
+        width: 100%;
+        height: auto;
+      }
+       
+      .places__card-content {
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "title ."
+          "title header"
+          "image first-text"
+          "button first-text";
+        margin: auto;
+        padding-bottom: 80px;
+      }
+    
+      .places__card-title {
+        grid-area: title;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 46px;
+        color:  #FFFFFF;
+        text-align: left;
+        width: 340px;
+        height: auto;
+        margin: 0 0 24px 0;
+    }
+        
+    .places__card-image {
+        grid-area: image;
+        width: 340px;
+        height: 340px;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .places__card-image:hover {
+        opacity: 0.5;
+      }
+    
+      .places__card-header {
+        grid-area: header;
+        width: 352px;
+        height: auto;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
+        margin: 0 0 20px 0;
+      }
+    
+      .places__card-subtitle {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        margin-bottom: 8px;
+      }
+    
+     .places__card-author {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+      }
+    
+      .places__card-details {
+        grid-area: first-text;
+        max-width: 352px;
+        height: auto;
+        padding-top: 24px;
+        margin-bottom: 25px;
     }
-    .places__details-element_one {
-        margin-bottom: 50px;
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
+
+      .places__card-details-description {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 163%;
+        text-align: left;
+        color:#ffffff;
+        padding-bottom:25px;
     }
-    .places__details-element_two {
-        margin-bottom: 50px;
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
+       
+    .places__card-button {
+        grid-area: button;
+        width: 330px;
+        height: 48px;
+        justify-self: start;
+        box-shadow: 5px 5px 10px #00000040;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1;
+        color:#FFFFFF;
+        text-decoration: none;
+        vertical-align: middle;
+        align-self: center;
+        text-align: center;
+        letter-spacing: 0;
+        padding:10px 20px;
+        background:
+        linear-gradient(90deg, rgba(2,120,254,1) 0%, rgba(0,58,123,1) 100%);
+        border-radius: 5px;
+        border: none;
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+    
     }
-    .places__details-element_three {
-        margin-bottom:73px;
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
-    }
-    .places__details-element_one .places__details
-    {
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-    .places__details-element_two .places__details
-    {
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-    .places__details-element_three .places__details
-    {
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-    .places__details-element_two .places__details-author-one
-    {
-        margin-bottom: 36px;
-    }
-    .places__details-element_three .places__details-author-one
-    {
-        margin-bottom: 30px;
-    }
-    .places__details {
-        display:flex;
-        max-width: 100%;
-        min-width: 100%;
-        justify-content: center;
+    
+      .places__card-button:hover {
+        background-image: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
+      }
+}
+
+@media screen and (max-width: 544px)
+{
+    .places {
+        width: 100%;
+        height: auto;
+      }
+       
+      .places__card-content {
+        display: flex;
+        width: 100%;
+        height: auto;
         flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding-bottom: 80px;
+      }
+    
+      .places__card-title {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 46px;
+        color:  #FFFFFF;
+        text-align: left;
+        width: 352px;
+        height: auto;
+        margin: 0 0 24px 0;
     }
-    .places__details-title {
+        
+    .places__card-image {
+        width: 340px;
+        height: 340px;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .places__card-image:hover {
+        opacity: 0.5;
+      }
+    
+      .places__card-header {
+        width: 352px;
+        height: 67px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0 0 20px 0;
+      }
+    
+      .places__card-subtitle {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        margin-bottom: 8px;
+      }
+    
+     .places__card-author {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+      }
+    
+      .places__card-details {
+        width: 352px;
+        height: auto;
+        padding-top: 24px;
+        margin-bottom: 25px;
+    }
+
+      .places__card-details-description {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 163%;
+        text-align: left;
+        color:#ffffff;
+    }
+       
+    .places__card-button {
+        width: 330px;
+        height: 48px;
+        justify-self: start;
+        box-shadow: 5px 5px 10px #00000040;
+        font-family: "Inter", Arial, sans-serif;
+        color:#FFFFFF;
+        text-decoration: none;
+        vertical-align: middle;
+        align-self: center;
+        text-align: center;
+        letter-spacing: 0;
+        padding:10px 20px;
+        background:
+        linear-gradient(90deg, rgba(2,120,254,1) 0%, rgba(0,58,123,1) 100%);
+        border-radius: 5px;
+        border: none;
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+    
+    }
+    
+      .places__card-button:hover {
+        background-image: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
+      }
+}
+
+@media screen and (max-width: 320px)
+{
+    .places {
+        width: 100%;
+        height: auto;
+      }
+       
+      .places__card-content {
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding-bottom: 50px;
+      }
+    
+      .places__card-title {
         font-family: "Inter", Arial, sans-serif;
         font-size: 32px;
         font-weight: 900;
-        line-height: 1.1;
-        color:  #FFFFFF;
-        text-align: left;
+        line-height: 32px;
+        width: 280px;
+        height: auto;
+        margin: 0 0 24px 0;
+    }
+        
+    .places__card-image {
+        width: 320px;
+        height: 320px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+      }
+    
+      .places__card-image:hover {
+        opacity: 0.5;
+      }
+    
+      .places__card-header {
+        width: 288px;
+      }
+    
+      .places__card-subtitle {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        margin-bottom: 8px;
+      }
+    
+     .places__card-author {
+        font-family: "Inter", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+      }
+    
+      .places__card-details {
+        width: 288px;
+        padding-top: 24px;
         margin-bottom: 30px;
     }
-    .places__details-subtitle {
-        font-family: "Inter", Arial, sans-serif;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1;
-        color:#AAAAAA;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom:8px;
-    }
-    .places__details-author-one {
-        font-family: "Inter", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.1;
-        color:#ffffff;
-        padding-bottom:4px;
-    }
-    .places__details-author-two {
-        font-family: "Inter", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.1;
-        color:#ffffff;
-        margin-bottom:30px;
-    }
-    .places__image {
-        width: 100%;
-        min-width: 50%;
-        height: 100%;
-        min-height: 50%;
-        max-height: 50%;
-        object-fit: cover;
-    }
-    .places__image-details {
-        margin-top:30px;
-        padding-bottom:8px;
-        width: 100%;
-        min-width: calc(100% - 50px);
-        max-width: calc(100% - 50px);
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-    .places__image-details-description {
+
+      .places__card-details-description {
         font-family: "Inter", Arial, sans-serif;
         font-size: 16px;
-        font-weight: 300;
-        line-height: 1.1;
+        font-weight: 400;
+        line-height: 163%;
         text-align: left;
         color:#ffffff;
-        margin-bottom: 25px;    
+        padding-bottom: 25px;
     }
-    .places__image-details-description:last-of-type {
-        margin-bottom: 25px;
-    }
-    .places__details-element_two .places__image-details
-    {
-        margin-top: 30px;
-        margin-bottom: 25px;
-    }
-    .places__details-element_three .places__image-details
-    {
-        margin-top: 30px;
-        margin-bottom: 25px;
-    }
-    .places__image-details-button
-    {
-        width:100%;
-        font-size:12px;
-        padding: 10px 10px;
+       
+    .places__card-button {
+        width: 280px;
+        height: 48px;
+        justify-self: start;
+        box-shadow: 5px 5px 10px #00000040;
+        font-family: "Inter", Arial, sans-serif;
+        color:#FFFFFF;
+        text-decoration: none;
         vertical-align: middle;
+        align-self: center;
+        text-align: center;
+        letter-spacing: 0;
+        padding:10px 20px;
+        background:
+        linear-gradient(90deg, rgba(2,120,254,1) 0%, rgba(0,58,123,1) 100%);
+        border-radius: 5px;
+        border: none;
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
+    
     }
+    
+      .places__card-button:hover {
+        background-image: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
+      }
 }
 
