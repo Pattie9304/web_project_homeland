@@ -17,6 +17,14 @@
     margin-bottom:80px;
 }
 
+.places__details-element_two {
+    margin-bottom: 80px;
+}
+
+.places__details-element_three {
+    margin-bottom: 80px;
+}
+
 .places__details-title {
     font-family: "Inter", Arial, sans-serif;
     font-size: 72px;
