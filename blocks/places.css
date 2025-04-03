@@ -2,6 +2,7 @@
     width:100%;
     height: auto;
 }
+
 .places__card-content
 {
     display: grid;
@@ -28,7 +29,7 @@
     text-align: left;
     width: 460px;
     height: 152px;
-    margin: 0 0 48px 0;
+    margin: 0px 48px;
 }
 
 .places__card-header {
