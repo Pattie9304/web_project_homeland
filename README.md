@@ -12,6 +12,8 @@ Patricia Higuera
 
 1.3 - En esta versión se añaden los datos del primer artículo en venta.
 
+1.4 - En esta versión se completaron los datos de los artículos en venta y se resolvieron bugs de rutas en las imágenes.
+
 ## Enlace al proyecto
 https://pattie9304.github.io/web_project_homeland/
 
