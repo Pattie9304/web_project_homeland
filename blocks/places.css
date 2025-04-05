@@ -196,7 +196,8 @@
     
       .places__card-details {
         grid-area: first-text;
-        max-width: 260px;
+        /*max-width: 260px;*/
+        max-width: calc(100% - 48px);
         height: auto;
         padding-top: 24px;
         margin-bottom: 25px;
@@ -214,6 +215,7 @@
     .places__card-button {
       text-decoration: none;
       padding: 15px;
+      margin-left: 48px;
       font-family: "Inter", Arial, sans-serif;
       font-size: 18px;
       letter-spacing: 0;
