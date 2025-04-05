@@ -286,7 +286,7 @@
     
       .places__card-header {
         grid-area: header;
-        width: 352px;
+        width: 300px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -314,7 +314,7 @@
     
       .places__card-details {
         grid-area: first-text;
-        max-width: 352px;
+        max-width: 300px;
         height: auto;
         padding-top: 24px;
         margin-bottom: 25px;
@@ -333,6 +333,7 @@
     .places__card-button {
       text-decoration: none;
       padding: 15px;
+      margin-left:48px;
       font-family: "Inter", Arial, sans-serif;
       font-size: 18px;
       letter-spacing: 0;
@@ -547,6 +548,7 @@
     .places__card-button {
       text-decoration: none;
       padding: 15px;
+      margin: 15px;
       font-family: "Inter", Arial, sans-serif;
       font-size: 18px;
       letter-spacing: 0;
